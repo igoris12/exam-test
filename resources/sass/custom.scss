@@ -1,0 +1,53 @@
+.card {
+    font-weight: bold;
+    font-size: larger;
+    fieldset {
+        margin: 15px;
+        border: 2px solid black;
+        padding: 12px;
+        display: flex;
+        legend {
+            color: black;
+            font-size: 25px;
+            display: inline-block;
+            padding: 6px;
+            text-align: center;
+            width: auto;
+        }
+        .block {
+            margin: 7px;
+        }
+    }
+}
+
+.listBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__content {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    &__buttons {
+        display: flex;
+        .btn {
+            margin: 0px 5px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .listBlock {
+        flex-direction: column;
+        &__content {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+            .item {
+                text-align: center;
+            }
+        }
+    }
+}
