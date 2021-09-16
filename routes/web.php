@@ -44,4 +44,3 @@ Route::group(['prefix' => 'members'], function(){
    Route::post('delete/{member}', [MemberController::class, 'destroy'])->name('member.destroy');
    Route::get('show/{member}', [MemberController::class, 'show'])->name('member.show');
 });
-

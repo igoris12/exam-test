@@ -11,8 +11,15 @@ use Validator;
 
 class MemberController extends Controller
 {
-
+    
     const RESULTS_IN_PAGE = 3;
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     /**
      * Display a listing of the resource.
      *
