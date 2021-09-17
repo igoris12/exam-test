@@ -16,14 +16,6 @@ use App\Http\Controllers\MemberController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::group(['prefix' => 'reservoirs'], function(){
    Route::get('', [ReservoirController::class, 'index'])->name('reservoir.index');
    Route::get('create', [ReservoirController::class, 'create'])->name('reservoir.create');
@@ -44,3 +36,11 @@ Route::group(['prefix' => 'members'], function(){
    Route::post('delete/{member}', [MemberController::class, 'destroy'])->name('member.destroy');
    Route::get('show/{member}', [MemberController::class, 'show'])->name('member.show');
 });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes(['register'=> false]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

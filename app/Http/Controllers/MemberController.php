@@ -39,7 +39,9 @@ class MemberController extends Controller
         
         $reservoirs = Reservoir::orderBy('title')->get();
         
-        return view('member.index', ['members' => $members, 'reservoirs' => $reservoirs]);
+        return view('member.index', ['members' => $members,
+         'reservoirs' => $reservoirs,
+        'reservoir_id' => $request->reservoir_id ?? '0']);
 
     }
 
