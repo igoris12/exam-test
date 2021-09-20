@@ -25,9 +25,9 @@
                             </div>
                             <div class="block">
                                 <button type="submit" class="btn btn-info" name="filter" value="reservoir">Filter</button>
-                                <a href="{{ route('member.index') }}" class="btn btn-danger">Reset</a>
+                                <a href="{{ route('member.index') }}" class="btn btn-danger"><i
+                                        class="fas fa-redo"></i></a>
                             </div>
-
                         </fieldset>
                     </form>
                     <div class="card-body">
@@ -53,9 +53,11 @@
                                         </div>
 
                                         <div class="listBlock__buttons">
-                                            <a href="{{ route('member.edit', [$member]) }}" class="btn btn-info">Edit</a>
+                                            <a href="{{ route('member.edit', [$member]) }}"
+                                                class="btn btn-info">Edit</a>
                                             <form method="POST" action="{{ route('member.destroy', $member) }}">
-                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                                <button class="btn btn-danger" type="submit"><i
+                                                        class="fas fa-trash-alt"></i></button>
                                                 @csrf
                                             </form>
                                         </div>

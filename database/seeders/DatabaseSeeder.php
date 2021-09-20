@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-         foreach(range(1, $reservoirsCount) as $_) {
+         foreach(range(1, 50) as $_) {
             $experience = $faker->numberBetween($min = 1, $max = 15);
             DB::table('members')->insert([
                 'name' =>  $faker->firstName(),

@@ -12,7 +12,7 @@ use Validator;
 class MemberController extends Controller
 {
     
-    const RESULTS_IN_PAGE = 3;
+    const RESULTS_IN_PAGE = 5;
 
     public function __construct()
     {
