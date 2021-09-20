@@ -25,8 +25,8 @@
                             </div>
                             <div class="block">
                                 <button type="submit" class="btn btn-info" name="filter" value="reservoir">Filter</button>
-                                <a href="{{ route('member.index') }}" class="btn btn-danger"><i
-                                        class="fas fa-redo"></i></a>
+                                <a href="{{ route('member.index') }}" class="btn btn-danger">
+                                    <i class="fas fa-redo"></i></a>
                             </div>
                         </fieldset>
                     </form>
